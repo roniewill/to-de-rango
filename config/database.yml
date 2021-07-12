@@ -18,5 +18,5 @@ test:
 production:
   <<: *default
   database: <%= ENV['DATABASE_PROD'] %>
-  username: lite_bank_app
-  password: <%= ENV['LITE_BANK_APP_DATABASE_PASSWORD'] %>
+  username: to_de_rango
+  password: <%= ENV['TO_DE_RANGO_DATABASE_PASSWORD'] %>
