@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { render :index, notice: "Product created" }
+        format.html { redirect_to products_url, notice: "Product was successfully created." }
       else
         format.html { render :new, alert: "Error to create product" } 
       end
@@ -20,12 +20,10 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:name, :value, :restaurant_id)
     end
