@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :products do
+  factory :product do
     name { 'Some Product' }
-    value  { 50 }
-    restaurant  { 1 }
+    value  { rand(100) }
+    restaurant
   end
 end
